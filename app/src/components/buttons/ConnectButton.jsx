@@ -1,7 +1,7 @@
-// import Button from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 
 export default function ConnectButton() {
   return (
-    <div>This is a button</div>
+    <Button>This is a button</Button>
   )
 }
