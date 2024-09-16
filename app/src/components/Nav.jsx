@@ -10,7 +10,7 @@ export default function SideNav() {
           <Nav>
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
-            <Nav.Link>Projects</Nav.Link>
+            <Nav.Link href="projects">Projects</Nav.Link>
             <Nav.Link href="/connect">Connect</Nav.Link>
             <Nav.Link href="https://github.com/LilliDarling">GitHub</Nav.Link>
             <Nav.Link href="https://www.linkedin.com/in/lillith-long/">LinkedIn</Nav.Link>
