@@ -1,21 +1,38 @@
 import TechStack from "./TechStack"
 import ProjectInfo from "./Project"
 import ProjectGallery from "./Gallery"
+import { projects } from "./projectsFile"
+import { useState } from "react"
 
 export default function Projects() {
+  const [selectedProjectId, setSelectedProjectId] = useState(Object.keys(projects)[0])
+
+  const selectedProject = projects[selectedProjectId]
+
   return (
     <>
       <div>
-        Projects navigation components
+        <nav>
+          <ul>
+            {Object.values(projects).map((project) => (
+              <li
+                key={project.id}
+                onClick={() => setSelectedProjectId(project.id)}
+              >
+                {project.title}
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
       <div>
-        <TechStack />
+        <TechStack project={selectedProject} />
       </div>
       <div>
-        <ProjectInfo />
+        <ProjectInfo project={selectedProject} />
       </div>
       <div>
-        <ProjectGallery />
+        <ProjectGallery project={selectedProject} />
       </div>
     </>
   )

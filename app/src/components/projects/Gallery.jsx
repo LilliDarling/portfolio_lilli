@@ -1,7 +1,9 @@
-export default function ProjectGallery() {
+export default function ProjectGallery({ project }) {
   return (
     <div>
-      Project Gallery
+      {project.images.map((images, index) =>(
+        <span key={index}>{images}</span>
+      ))}
     </div>
   )
 }
