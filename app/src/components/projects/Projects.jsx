@@ -1,4 +1,3 @@
-import ProjectInfo from "./Project"
 import TechStack from "./TechStack"
 import ProjectInfo from "./Project"
 import ProjectGallery from "./Gallery"
