@@ -7,9 +7,9 @@ export const projects = {
     repo: "https://gitlab.com/LilliDarling/witchycooking",
     link: "https://witchycooking.com",
     images: [
-      "",
-      ""
-    ]
+      "../assets/profile.png"
+    ],
+    mainImage: "../assets/profile.png"
   },
   2: {
     id: 2,
@@ -19,7 +19,20 @@ export const projects = {
     repo: "https://github.com/LilliDarling/GrowingMe",
     link: "https://www.growingme.com",
     images: [
-      ""
-    ]
+      "../assets/profile.png"
+    ],
+    mainImage: "../assets/profile.png"
+  },
+  3: {
+    id: 3,
+    title: "Portfolio",
+    description: "input description",
+    stack: ["React", "Bootstrap"],
+    repo: "https://github.com/LilliDarling/portfolio_lilli",
+    link: "https://www.LillithLong.pro",
+    images: [
+      "../assets/profile.png",
+    ],
+    mainImage: "../assets/profile.png"
   }
 }

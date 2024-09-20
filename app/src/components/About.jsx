@@ -1,6 +1,18 @@
+import { useNavigate } from "react-router-dom"
 import ConnectButton from "./buttons/ConnectButton"
+import { projects } from "./projects/projectsFile"
 
 export default function About() {
+  const navigate = useNavigate()
+
+  const latestProjects = Object.values(projects)
+    .sort((a, b) => b.id - a.id)
+    .slice(0, 3)
+
+  const handleProjectNavigate = (id) => {
+    navigate('/projects', { state: { selectedProjectId: id }})
+  }
+  
   return (
     <>
       <div>
@@ -16,9 +28,15 @@ export default function About() {
         </div>
       </div>
       <div>
-        <div>Card1</div>
-        <div>Card2</div>
-        <div>Card3</div>
+        {latestProjects.map((project) => (
+          <div key={project.id}>
+            <img src={project.mainImage} />
+            <h2>{project.title}</h2>
+            <button onClick={() => handleProjectNavigate(project.id)}>
+              View
+            </button>
+          </div>
+        ))}
       </div>
     </>
   )

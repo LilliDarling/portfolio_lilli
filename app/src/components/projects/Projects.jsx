@@ -2,10 +2,21 @@ import TechStack from "./TechStack"
 import ProjectInfo from "./Project"
 import ProjectGallery from "./Gallery"
 import { projects } from "./projectsFile"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useLocation } from "react-router-dom"
 
 export default function Projects() {
-  const [selectedProjectId, setSelectedProjectId] = useState(Object.keys(projects)[0])
+  const location = useLocation()
+
+  const [selectedProjectId, setSelectedProjectId] = useState(
+    location.state?.selectedProjectId || Object.keys(projects)[0]
+  )
+
+  useEffect(() => {
+    if (location.state?.selectedProjectId) {
+      setSelectedProjectId(location.state.selectedProjectId)
+    }
+  }, [location])
 
   const selectedProject = projects[selectedProjectId]
 
