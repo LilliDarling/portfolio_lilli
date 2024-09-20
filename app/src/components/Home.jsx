@@ -1,5 +1,5 @@
-import { Button } from 'react-bootstrap';
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import ConnectButton from './buttons/ConnectButton';
 
 import bootstrapImage from '/src/assets/icons/bootstrap.png'
 import djangoImage from '/src/assets/icons/django.png'
@@ -59,7 +59,7 @@ export default function Home() {
     <div>
       <div>Hi,<br/>I'm Lillith<br/>A Software Engineer</div>
       <div><span ref={roleRef}>{roles[0]}</span></div>
-      <Button href="">Connect</Button>
+      <ConnectButton />
       <div>
         <ul>
           <li><img src={bootstrapImage} /></li>
