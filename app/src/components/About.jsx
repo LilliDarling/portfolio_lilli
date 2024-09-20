@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import ConnectButton from "./buttons/ConnectButton"
 import { projects } from "./projects/projectsFile"
+import { Card, Button } from "react-bootstrap"
 
 export default function About() {
   const navigate = useNavigate()
@@ -29,13 +30,19 @@ export default function About() {
       </div>
       <div>
         {latestProjects.map((project) => (
-          <div key={project.id}>
-            <img src={project.mainImage} />
-            <h2>{project.title}</h2>
-            <button onClick={() => handleProjectNavigate(project.id)}>
-              View
-            </button>
-          </div>
+          <Card key={project.id}>
+            <Card.Header>
+              <Card.Img src={project.mainImage} />
+            </Card.Header>
+            <Card.Body>
+              <Card.Title>{project.title}</Card.Title>
+            </Card.Body>
+            <Card.Footer>
+              <Button onClick={() => handleProjectNavigate(project.id)}>
+                View
+              </Button>
+            </Card.Footer>
+          </Card>
         ))}
       </div>
     </>
