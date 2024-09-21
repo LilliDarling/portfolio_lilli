@@ -1,26 +1,30 @@
+require('dotenv').config()
 const express = require('express')
 const nodemailer = require('nodemailer')
+const cors = require('cors')
 const app = express()
 
 app.use(express.json())
+app.use(cors())
 
 app.post('/api/email', async (req, res) => {
   const { name, email, message } = req.body
 
   let transporter = nodemailer.createTransport({
-    host: "replace-smtp-host",
+    service: 'gmail',
+    host: process.env.SMTP_HOST,
     port: 587,
     secure: false,
     auth: {
-      user: 'enter-email@gmail.com',
-      pass: 'enter-password'
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS
     }
   })
 
   try {
     let info = await transporter.sendMail({
-      from: '"Portfolio Site", <enter-email@gmail.com>',
-      to: "enter-email@gmail.com",
+      from: '"Portfolio Site", <process.env.EMAIL_USER>',
+      to: process.env.EMAIL_USER,
       subject: "New Connect Form Submission",
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
       html: `<p><strong>Name:</strong> ${name}</p>
@@ -30,7 +34,7 @@ app.post('/api/email', async (req, res) => {
 
     res.status(200).json({ message: 'Email sent successfully' })
   } catch (error) {
-    resizeTo.status(500).json({ error: 'Failed to send email' })
+    res.status(500).json({ error: 'Failed to send email' })
   }
 })
 
