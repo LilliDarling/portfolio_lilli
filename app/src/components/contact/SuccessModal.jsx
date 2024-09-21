@@ -1,5 +1,4 @@
-import { Modal, } from "react-bootstrap";
-import { useState } from "react";
+import { Modal, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 export default function Success({ show, handleClose }) {
