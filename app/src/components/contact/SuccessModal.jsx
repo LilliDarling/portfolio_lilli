@@ -2,15 +2,13 @@ import { Modal, } from "react-bootstrap";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Success() {
-  const [show, setShow] = useState(false)
+export default function Success({ show, handleClose }) {
   const navigate = useNavigate()
 
   const handleClick = () => {
     navigate("/home")
+    handleClose()
   }
-
-  const handleClose = setShow(false)
 
   return (
     <Modal show={show} onHide={handleClose}>
