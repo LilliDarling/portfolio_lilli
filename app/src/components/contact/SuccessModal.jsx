@@ -5,7 +5,7 @@ export default function Success({ show, handleClose }) {
   const navigate = useNavigate()
 
   const handleClick = () => {
-    navigate("/home")
+    navigate("/")
     handleClose()
   }
 
@@ -18,7 +18,7 @@ export default function Success({ show, handleClose }) {
         Your message has been sent off successfully! If I don’t respond within the business day I am probably out. I look forward to hearing more about you and your company or ideas!
       </Modal.Body>
       <Modal.Footer>
-        <Button onCLick={handleClick}>Home</Button>
+        <Button onClick={handleClick}>Home</Button>
       </Modal.Footer>
     </Modal>
   )
