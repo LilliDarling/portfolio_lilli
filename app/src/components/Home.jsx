@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { ListGroup, Image } from 'react-bootstrap';
 import ConnectButton from './buttons/ConnectButton';
 
 import bootstrapImage from '/src/assets/icons/bootstrap.png'
@@ -18,7 +19,15 @@ import vueImage from '/src/assets/icons/vue.png'
 import profileImage from '/src/assets/profile.png'
 
 export default function Home() {
-  const roles = ["A Snowboarder", "A Hiker", "An Herbalist", "A Cat Mom", "An Entreprenuer"]
+  const roles = [
+    "A Snowboarder",
+    "A Hiker",
+    "An Herbalist",
+    "A Cat Mom",
+    "An Entreprenuer",
+    "A World Traveler",
+    "A Gamer"
+  ]
 
   const roleRef = useRef(null)
 
@@ -28,7 +37,6 @@ export default function Home() {
 
     const updateRole = () => {
       const nextIndex = (currentIndex + 1) % roles.length
-      const currentRole = roles[currentIndex]
       const nextRole = roles[nextIndex]
 
       roleElement.animate(
@@ -61,25 +69,59 @@ export default function Home() {
       <div><span ref={roleRef}>{roles[0]}</span></div>
       <ConnectButton />
       <div>
-        <ul>
-          <li><img src={bootstrapImage} /></li>
-          <li><img src={djangoImage} /></li>
-          <li><img src={doImage} /></li>
-          <li><img src={dockerImage} /></li>
-          <li><img src={fastapiImage} /></li>
-          <li><img src={gitImage} /></li>
-          <li><img src={kubernetesImage} /></li>
-          <li><img src={mongoImage} /></li>
-          <li><img src={postgresImage} /></li>
-          <li><img src={pythonImage} /></li>
-          <li><img src={reactImage} /></li>
-          <li><img src={sqlImage} /></li>
-          <li><img src={tailwindImage} /></li>
-          <li><img src={vueImage} /></li>
-        </ul>
+        <div>
+          <ListGroup>
+            <ListGroup.Item>
+              <Image src={bootstrapImage} />
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Image src={djangoImage} />
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Image src={doImage} />
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Image src={dockerImage} />
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Image src={fastapiImage} />
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Image src={gitImage} />
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Image src={kubernetesImage} />
+            </ListGroup.Item>
+          </ListGroup>
+        </div>
+        <div>
+          <ListGroup>
+            <ListGroup.Item>
+              <Image src={mongoImage} />
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Image src={postgresImage} />
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Image src={pythonImage} />
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Image src={reactImage} />
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Image src={sqlImage} />
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Image src={tailwindImage} />
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Image src={vueImage} />
+            </ListGroup.Item>
+          </ListGroup>
+        </div>
       </div>
       <div>
-        <img src={profileImage} />
+        <Image src={profileImage} />
       </div>
     </div>
   )
