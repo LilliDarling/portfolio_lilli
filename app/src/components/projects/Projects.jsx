@@ -4,6 +4,7 @@ import ProjectGallery from "./Gallery"
 import { projects } from "./projectsFile"
 import { useState, useEffect } from "react"
 import { useLocation } from "react-router-dom"
+import { Nav, ListGroup } from "react-bootstrap"
 
 export default function Projects() {
   const location = useLocation()
@@ -23,18 +24,20 @@ export default function Projects() {
   return (
     <>
       <div>
-        <nav>
-          <ul>
-            {Object.values(projects).map((project) => (
-              <li
-                key={project.id}
-                onClick={() => setSelectedProjectId(project.id)}
-              >
-                {project.title}
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <Nav variant='tabs'>
+          <Nav.Item>
+            <ListGroup horizontal>
+              {Object.values(projects).map((project) => (
+                <ListGroup.Item
+                  key={project.id}
+                  onClick={() => setSelectedProjectId(project.id)}
+                >
+                  {project.title}
+                </ListGroup.Item>
+              ))}
+            </ListGroup>
+          </Nav.Item>
+        </Nav>
       </div>
       <div>
         <TechStack project={selectedProject} />
