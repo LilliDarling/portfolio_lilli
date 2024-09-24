@@ -4,8 +4,13 @@ const nodemailer = require('nodemailer')
 const cors = require('cors')
 const app = express()
 
+const corsOps = {
+  origin: 'http://localhost:5173',
+  optionsSuccessStatus: 200
+}
+
 app.use(express.json())
-app.use(cors())
+app.use(cors(corsOps))
 
 app.post('/api/email', async (req, res) => {
   const { name, email, message } = req.body
@@ -23,7 +28,7 @@ app.post('/api/email', async (req, res) => {
 
   try {
     let info = await transporter.sendMail({
-      from: '"Portfolio Site", <process.env.EMAIL_USER>',
+      from: '"Portfolio Site", <' + process.env.EMAIL_USER + '>',
       to: process.env.EMAIL_USER,
       subject: "New Connect Form Submission",
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
