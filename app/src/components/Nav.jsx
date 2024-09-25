@@ -29,7 +29,7 @@ export default function SideNav() {
       className={`sidebar-nav ${expanded ? 'expanded' : ''} ${isDesktop ? 'desktop' : 'mobile'}`} 
       expand={isDesktop ? true : "lg"}>
       <Container fluid className="d-flex flex-column h-100 p-0">
-        <div className="nav-header d-flex justify-content-between align-items-center w-100 p-3">
+        <div className="nav-header d-flex justify-content-between align-items-center p-3">
           <Navbar.Brand>
             <Image src={LogoImage} alt="Lillith Long" className="logo ms-2" />
           </Navbar.Brand>

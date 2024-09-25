@@ -13,6 +13,7 @@ body {
     color: #21242B;
     display: flex;
     flex-direction: column;
+    margin-left: 175px;
     margin-right: 40px;
     margin-top: 35px;
 }

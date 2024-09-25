@@ -27,7 +27,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 150px;
+  width: 125px;
   background-color: #21242B;
   overflow-y: auto;
   overflow-x: hidden;
@@ -48,7 +48,7 @@
 }
 
 .sidebar-nav .logo {
-  max-width: 110px;
+  max-width: 100px;
 }
 
 .sidebar-nav .navbar-toggler {
@@ -95,7 +95,7 @@
 }
 
 .sidebar-nav.desktop:hover {
-  width: 200px;
+  width: 175px;
 }
 
 @media (max-width: 1050px) {
@@ -103,6 +103,9 @@
     width: 100%;
   }
   
+  .nav-header {
+    width: 100%;
+  }
   .sidebar-nav.expanded .nav-label {
     display: inline;
   }
