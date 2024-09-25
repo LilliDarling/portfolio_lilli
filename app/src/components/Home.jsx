@@ -82,28 +82,26 @@ export default function Home() {
   ]
 
   return (
-    <>
-      <Container fluid className="h-100">
-        <Row className="h-100">
-          <Col lg={6} className="d-flex flex-column justify-content-center">
-            <div className="intro">Hi,<br/>I'm Lillith,<br/>A Software Engineer.</div>
-            <div className="roles"><span ref={roleRef}>{roles[0]}</span></div>
-            <ConnectButton />
+    <Container fluid className="h-100">
+      <Row className="h-100">
+        <Col lg={6} className="d-flex flex-column justify-content-center">
+          <div className="intro">Hi,<br/>I'm Lillith,<br/>A Software Engineer.</div>
+          <div className="roles"><span ref={roleRef}>{roles[0]}</span></div>
+          <ConnectButton />
 
-            <Row className="tech-stack mt-5">
-              {techImages.map((image, index) => (
-                <Col key={index} xs={4} md={3} lg={2} className="mb-3">
-                  <Image src={image} className="tech-icon" />
-                </Col>
-              ))}
-            </Row>
-          </Col>
+          <Row className="tech-stack mt-5">
+            {techImages.map((image, index) => (
+              <Col key={index} xs={4} md={3} lg={2} className="mb-3">
+                <Image src={image} className="tech-icon" />
+              </Col>
+            ))}
+          </Row>
+        </Col>
 
-          <Col lg={6} className="d-none d-lg-flex align-items-center">
-            <Image src={profileImage} fluid className="profile-img" />
-          </Col>
-        </Row>
-      </Container>
-    </>
+        <Col lg={6} className="d-none d-lg-flex align-items-center">
+          <Image src={profileImage} fluid className="profile-img" />
+        </Col>
+      </Row>
+    </Container>
   )
 }

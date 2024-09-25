@@ -39,7 +39,7 @@
 
 @media (min-width: 1050px) {
   body {
-    margin-left: 250px;
+    margin-left: 225px;
   }
   .intro {
     font-size: 50px;
@@ -48,12 +48,18 @@
     font-size: 45px;
   }
   .profile-img {
-    max-width: 80%;
-    margin-left: 100px;
+    max-width: 90%;
+    margin-left: 90px;
     height: auto;
   }
   .tech-stack .tech-icon {
     max-width: 60px;
     max-height: 60px;
+  }
+}
+
+@media (max-width: 1049px) {
+  body {
+    padding-top: 150px;
   }
 }
