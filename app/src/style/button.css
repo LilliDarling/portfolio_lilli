@@ -1,0 +1,19 @@
+.btn {
+  background-color: #4C1E3C;
+  color: #C6BBB9;
+  box-shadow: 2px 3px 8px 1px #21242b81;
+}
+
+.btn-connect {
+  border: 1px solid #C6BBB9;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 35px;
+  padding: 5px 30px;
+}
+
+.btn-view {
+  border: 1px solid #7A748C;
+  border-radius: 15px;
+  padding: 2px 25px;
+}

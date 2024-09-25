@@ -9,6 +9,11 @@ export default function ConnectButton() {
   }
   
   return (
-    <Button onClick={handleClick} type="submit">Connect</Button>
+    <Button
+      className="btn-connect" 
+      onClick={handleClick} type="submit"
+    >
+      Connect
+    </Button>
   )
 }

@@ -3,6 +3,7 @@ import ConnectButton from "./buttons/ConnectButton"
 import { projects } from "./projects/projectsFile"
 import { Card, Button,Container, Row, Col } from "react-bootstrap"
 import '../style/about.css'
+import '../style/button.css'
 
 export default function About() {
   const navigate = useNavigate()
@@ -34,7 +35,7 @@ export default function About() {
                 <Card.Title className="project-title">{project.title}</Card.Title>
               </Card.Body>
               <Card.Footer>
-                <Button onClick={() => handleProjectNavigate(project.id)}>
+                <Button className="btn-view" onClick={() => handleProjectNavigate(project.id)}>
                   View
                 </Button>
               </Card.Footer>

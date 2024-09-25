@@ -87,7 +87,9 @@ export default function Home() {
         <Col lg={6} className="d-flex flex-column justify-content-center">
           <div className="intro">Hi,<br/>I'm Lillith,<br/>A Software Engineer.</div>
           <div className="roles"><span ref={roleRef}>{roles[0]}</span></div>
-          <ConnectButton />
+          <div>
+            <ConnectButton />
+          </div>
 
           <Row className="tech-stack mt-5">
             {techImages.map((image, index) => (
