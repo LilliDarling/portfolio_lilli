@@ -4,12 +4,15 @@ import SideNav from './components/Nav.jsx'
 import About from "./components/About.jsx";
 import Connect from "./components/contact/Connect.jsx";
 import Projects from "./components/projects/Projects.jsx";
+import { useState } from "react";
 
 export default function App(){
+  const [navExpanded, setNavExpanded] = useState(false)
+
   return (
-    <BrowserRouter>
+    <BrowserRouter className={`app-container ${navExpanded ? 'nav-expanded' : ''}`}>
       <SideNav />
-      <Routes>
+      <Routes className="main-content">
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
