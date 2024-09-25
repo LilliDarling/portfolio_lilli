@@ -32,7 +32,7 @@ export const projects = {
     images: [
       "../assets/profile.png"
     ],
-    mainImage: "../assets/profile.png"
+    mainImage: WCMainImage
   },
   3: {
     id: 3,
@@ -44,6 +44,6 @@ export const projects = {
     images: [
       "../assets/profile.png",
     ],
-    mainImage: "../assets/profile.png"
+    mainImage: WCMainImage
   }
 }
