@@ -1,0 +1,59 @@
+.container-fluid {
+  min-height: 100%;
+}
+
+.intro {
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.roles {
+  font-size: 50px;
+  color: #c6bbb985;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.tech-stack .tech-icon {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  background-color: transparent;
+}
+
+.tech-stack .col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-stack .tech-icon {
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.profile-img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 1050px) {
+  body {
+    margin-left: 250px;
+  }
+  .intro {
+    font-size: 50px;
+  }
+  .roles {
+    font-size: 45px;
+  }
+  .profile-img {
+    max-width: 80%;
+    margin-left: 100px;
+    height: auto;
+  }
+  .tech-stack .tech-icon {
+    max-width: 60px;
+    max-height: 60px;
+  }
+}

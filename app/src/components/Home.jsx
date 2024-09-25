@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
-import { ListGroup, Image } from 'react-bootstrap';
+import { Image, Container, Row, Col } from 'react-bootstrap';
 import ConnectButton from './buttons/ConnectButton';
+import '../style/home.css'
 
 import bootstrapImage from '/src/assets/icons/bootstrap.png'
 import djangoImage from '/src/assets/icons/django.png'
@@ -63,66 +64,46 @@ export default function Home() {
     return () => clearInterval(intervalId)
   }, [])
 
+  const techImages = [
+    bootstrapImage, 
+    djangoImage, 
+    doImage, 
+    dockerImage, 
+    fastapiImage, 
+    gitImage, 
+    kubernetesImage, 
+    mongoImage, 
+    postgresImage, 
+    pythonImage, 
+    reactImage, 
+    sqlImage, 
+    tailwindImage, 
+    vueImage
+  ]
+
   return (
-    <div>
-      <div>Hi,<br/>I'm Lillith<br/>A Software Engineer</div>
-      <div><span ref={roleRef}>{roles[0]}</span></div>
-      <ConnectButton />
-      <div>
-        <div>
-          <ListGroup>
-            <ListGroup.Item>
-              <Image src={bootstrapImage} />
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Image src={djangoImage} />
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Image src={doImage} />
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Image src={dockerImage} />
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Image src={fastapiImage} />
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Image src={gitImage} />
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Image src={kubernetesImage} />
-            </ListGroup.Item>
-          </ListGroup>
-        </div>
-        <div>
-          <ListGroup>
-            <ListGroup.Item>
-              <Image src={mongoImage} />
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Image src={postgresImage} />
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Image src={pythonImage} />
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Image src={reactImage} />
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Image src={sqlImage} />
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Image src={tailwindImage} />
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Image src={vueImage} />
-            </ListGroup.Item>
-          </ListGroup>
-        </div>
-      </div>
-      <div>
-        <Image src={profileImage} />
-      </div>
-    </div>
+    <>
+      <Container fluid className="h-100">
+        <Row className="h-100">
+          <Col lg={6} className="d-flex flex-column justify-content-center">
+            <div className="intro">Hi,<br/>I'm Lillith,<br/>A Software Engineer.</div>
+            <div className="roles"><span ref={roleRef}>{roles[0]}</span></div>
+            <ConnectButton />
+
+            <Row className="tech-stack mt-5">
+              {techImages.map((image, index) => (
+                <Col key={index} xs={4} md={3} lg={2} className="mb-3">
+                  <Image src={image} className="tech-icon" />
+                </Col>
+              ))}
+            </Row>
+          </Col>
+
+          <Col lg={6} className="d-none d-lg-flex align-items-center">
+            <Image src={profileImage} fluid className="profile-img" />
+          </Col>
+        </Row>
+      </Container>
+    </>
   )
 }

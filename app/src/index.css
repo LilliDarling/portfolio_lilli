@@ -11,12 +11,11 @@ body {
     background-attachment: fixed;
     min-height: 93vh;
     max-width: 100%;
-    color: black;
+    color: #21242B;
     display: flex;
     flex-direction: column;
-    margin-left: 250px;
     margin-right: 50px;
-    margin-top: 50px;
+    margin-top: 75px;
 }
 
 @media screen and (max-width: 1050px) {
@@ -36,7 +35,7 @@ body {
         background-position: top center;
         margin-left: 25px;
         margin-right: 25px;
-        max-width: 100%;
+        margin-top: 0;
     }
 }
 
