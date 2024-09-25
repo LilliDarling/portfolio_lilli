@@ -1,4 +1,127 @@
 .sidebar-nav {
+  transition: all 0.3s ease;
+}
+
+.sidebar-nav.mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #21242B;
+  z-index: 1030;
+}
+
+.sidebar-nav.mobile:not(.expanded) {
+  height: auto;
+  bottom: auto;
+}
+
+.sidebar-nav.mobile.expanded {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar-nav.desktop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 150px;
+  background-color: #21242B;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+.sidebar-nav.desktop::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.sidebar-nav.desktop:hover {
+  width: 200px;
+}
+
+.sidebar-nav .nav-header {
+  background-color: #21242B;
+}
+
+.sidebar-nav .logo {
+  max-width: 110px;
+}
+
+.sidebar-nav .navbar-toggler {
+  border: none;
+  background-color: #C6BBB9;
+}
+
+.sidebar-nav .social-links {
+  margin-top: 30px;
+}
+
+.sidebar-nav .nav-item {
+  display: flex;
+  align-items: center;
+  color: #C6BBB9;
+  font-size: 24px;
+}
+
+.sidebar-nav .nav-item:hover {
+  background-color: #4C1E3C;
+}
+
+.sidebar-nav .nav-item img {
+  width: 40px;
+  height: 40px;
+}
+
+.sidebar-nav .nav-item:hover img {
+  transform: scale(1.1);
+}
+
+.sidebar-nav .nav-label {
+  margin-left: 1rem;
+  display: none;
+}
+
+.sidebar-nav.expanded .nav-label,
+.sidebar-nav.desktop:hover .nav-label {
+  display: inline;
+}
+
+.sidebar-nav.desktop {
+  overflow-y: auto;
+}
+
+.sidebar-nav.desktop:hover {
+  width: 200px;
+}
+
+@media (max-width: 991px) {
+  .sidebar-nav.expanded {
+    width: 100%;
+  }
+  
+  .sidebar-nav.expanded .nav-label {
+    display: inline;
+  }
+
+  .sidebar-nav.mobile.expanded .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+
+  .sidebar-nav.mobile.expanded .nav-links,
+  .sidebar-nav.mobile.expanded .social-links {
+    width: 100%;
+  }
+
+  .sidebar-nav.mobile.expanded .nav-item {
+    padding: 1rem;
+  }
+}
+/* .sidebar-nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -100,4 +223,4 @@
     padding-right: 15px;
     padding-left: 15px;
   }
-}
+} */
