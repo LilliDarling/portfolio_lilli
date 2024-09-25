@@ -9,7 +9,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 93vh;
     max-width: 100%;
     color: #21242B;
     display: flex;
