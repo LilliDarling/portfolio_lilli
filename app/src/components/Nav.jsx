@@ -13,7 +13,7 @@ import linkedinImage from '../assets/icons/linkedin.png'
 
 export default function SideNav() {
   const [expanded, setExpanded] = useState(false)
-  const isDesktop = useMediaQuery({ minWidth: 992 })
+  const isDesktop = useMediaQuery({ minWidth: 1050 })
 
   const toggleExpanded = () => {
     setExpanded(!expanded)

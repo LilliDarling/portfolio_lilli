@@ -51,19 +51,20 @@ h1 {
 
 p {
   font-size: 18px;
+  background-color: #c6bbb948;
+  border-radius: 15px;
+  /* padding-left: 8px;
+  padding-right: 8px; */
+  padding: 10px;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1300px) {
   .about-container {
     overflow: hidden;
   }
 
   .projects-col {
     position: relative;
-  }
-
-  p {
-    padding-right: 25%;
   }
 
   .project-card {
@@ -73,16 +74,17 @@ p {
 
   .card-1 {
     top: 10%;
-    right: 75%;
+    right: 30%;
   }
 
   .card-2 {
-    top: 30%;
+    top: 35%;
+    right: -25%
   }
 
   .card-3 {
-    top: 50%;
-    right: 75%;
+    top: 55%;
+    right: 30%;
   }
 }
 
