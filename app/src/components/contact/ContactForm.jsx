@@ -1,9 +1,12 @@
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Container, Row, Col } from 'react-bootstrap'
 import { useState } from 'react'
 import Success from './SuccessModal'
+import '../../style/contact.css'
+import '../../style/button.css'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
+    company: '',
     name: '',
     email: '',
     message: ''
@@ -39,7 +42,7 @@ export default function Contact() {
       }
 
       setShowSuccess(true)
-      setFormData({ name:'', email: '', message: ''})
+      setFormData({ company: '', name: '', email: '', message: ''})
     } catch (error) {
       setErrorSubmitting(error.message)
     } finally {
@@ -53,38 +56,55 @@ export default function Contact() {
 
   return (
     <>
-      <Form onSubmit={handleSubmit}>
-        <Form.Group>
-          <Form.Control 
-            required
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Enter Name or Company" 
-          />
-          <Form.Control 
-            required
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Enter email address" 
-          />
-          <Form.Control 
-            required
-            type="textarea"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Enter message" 
-          />
-        </Form.Group>
-        <Button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? 'Sending...' : 'Submit'}
-        </Button>
-        {errorSubmitting && <p>{errorSubmitting}</p>}
-      </Form>
+      <Container fluid className="contact-container">
+        <Row className="justify-content-center">
+          <Col xs={12} md={8} lg={6}>
+            <Form onSubmit={handleSubmit} className="contact-form">
+              <Form.Group className="mb-3">
+                <Form.Control 
+                  required
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  placeholder="Enter Company" 
+                />
+              </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Control 
+                  required
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Enter Name" 
+                />
+              </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Control 
+                  required
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Enter email address" 
+                />
+              </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Control 
+                  required
+                  as="textarea"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Enter message" 
+                />
+              </Form.Group>
+              <Button type="submit" disabled={isSubmitting} className="btn-connect submit">
+                {isSubmitting ? 'Sending...' : 'Submit'}
+              </Button>
+              {errorSubmitting && <p className="text-danger mt-3">{errorSubmitting}</p>}
+            </Form>
+          </Col>
+        </Row>
+      </Container>
 
       <Success show={showSuccess} handleClose={handleCloseSuccess} />
     </>

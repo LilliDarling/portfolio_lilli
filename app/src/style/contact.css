@@ -1,0 +1,44 @@
+.contact-container {
+  padding: 2rem 1rem;
+}
+
+.contact-form {
+  background-color: #21242B;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid #C6BBB9;
+  box-shadow: 2px 3px 8px 1px #21242b81;
+}
+
+.contact-form .form-control {
+  margin-bottom: 1rem;
+  background-color: #C6BBB9;
+  border: none;
+  color: #21242B;
+  text-align: center;
+}
+
+.submit {
+  margin-left: 22%
+}
+
+@media (min-width: 540px) {
+  .submit {
+    margin-left: 30%
+  }
+}
+
+@media (min-width: 900px) {
+  .contact-container {
+    padding: 4rem 2rem;
+  }
+
+  .contact-form {
+    padding: 3rem;
+  }
+
+  .submit {
+    margin-left: 35%;
+  }
+}
+

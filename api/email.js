@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(cors(corsOps))
 
 app.post('/api/email', async (req, res) => {
-  const { name, email, message } = req.body
+  const { company, name, email, message } = req.body
 
   let transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -31,8 +31,9 @@ app.post('/api/email', async (req, res) => {
       from: '"Portfolio Site", <' + process.env.EMAIL_USER + '>',
       to: process.env.EMAIL_USER,
       subject: "New Connect Form Submission",
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
-      html: `<p><strong>Name:</strong> ${name}</p>
+      text: `Company: ${company}\nName: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      html: `<p><strong>Company:</strong> ${company}</p>
+            <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> ${email}</p>
             <p><strong>Message:</strong> ${message}</p>`
     })
