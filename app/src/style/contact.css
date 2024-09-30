@@ -19,19 +19,8 @@
 }
 
 .submit {
-  margin-left: 22%
-}
-
-@media (min-width: 540px) {
-  .submit {
-    margin-left: 30%
-  }
-}
-
-@media (min-width: 768px) {
-  .submit {
-    margin-left: 20%;
-  }
+  display: flex;
+  justify-content: center;
 }
 
 @media (min-width: 1000px) {
@@ -41,10 +30,6 @@
 
   .contact-form {
     margin: 0;
-  }
-
-  .submit {
-    margin-left: 25%;
   }
 }
 
@@ -68,5 +53,37 @@
   }
   .content-col {
     margin-right: 1rem;
+  }
+}
+
+.custom-modal .modal-content {
+  background-color: #c6bbb9cd;
+  border: 2px solid #4C1E3C;
+  border-radius: 15px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  text-align: center;
+  font-size: 18px;
+}
+
+.custom-modal .modal-header {
+  border-bottom: 0px;
+}
+
+.custom-modal .modal-title {
+  font-weight: 600;
+  font-size: 30px;
+  padding-left: 35%;
+}
+
+.custom-modal .modal-footer {
+  border-top: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1000px) {
+  .custom-modal .modal-title {
+    padding-left: 38%;
   }
 }

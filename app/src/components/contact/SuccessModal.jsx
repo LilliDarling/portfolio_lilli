@@ -10,7 +10,7 @@ export default function Success({ show, handleClose }) {
   }
 
   return (
-    <Modal show={show} onHide={handleClose}>
+    <Modal show={show} onHide={handleClose} dialogClassName="custom-modal">
       <Modal.Header closeButton>
         <Modal.Title>Success!</Modal.Title>
       </Modal.Header>
@@ -18,7 +18,7 @@ export default function Success({ show, handleClose }) {
         Your message has been sent off successfully! If I don’t respond within the business day I am probably out. I look forward to hearing more about you and your company or ideas!
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={handleClick}>Home</Button>
+        <Button onClick={handleClick} className="btn-adjusted">Home</Button>
       </Modal.Footer>
     </Modal>
   )

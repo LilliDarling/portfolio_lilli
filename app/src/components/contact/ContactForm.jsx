@@ -97,10 +97,12 @@ export default function Contact() {
                   placeholder="Enter message" 
                 />
               </Form.Group>
-              <Button type="submit" disabled={isSubmitting} className="btn-connect submit">
-                {isSubmitting ? 'Sending...' : 'Submit'}
-              </Button>
-              {errorSubmitting && <p className="text-danger mt-3">{errorSubmitting}</p>}
+              <Form.Group className="submit">
+                <Button type="submit" disabled={isSubmitting} className="btn-adjusted">
+                  {isSubmitting ? 'Sending...' : 'Submit'}
+                </Button>
+                {errorSubmitting && <p className="text-danger mt-3">{errorSubmitting}</p>}
+              </Form.Group>
             </Form>
           </Col>
         </Row>
