@@ -5,6 +5,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    background-color: #7A748C;
     background-image: url('./assets/background.png');
     background-size: cover;
     background-repeat: no-repeat;
