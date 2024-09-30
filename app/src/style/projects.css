@@ -28,3 +28,40 @@
     width: 150px;
   }
 }
+
+ .buttons {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .buttons {
+    justify-content: flex-start;
+  }
+}
+
+.tech-stack {
+  padding: 1rem;
+}
+
+.stack-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stack-item {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (min-width: 576px) {
+  .stack-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .stack-item {
+    width: auto;
+  }
+}

@@ -1,28 +1,34 @@
-import { Button } from "react-bootstrap"
+import { Button, Container, Col, Row } from "react-bootstrap"
+import "../../style/button.css"
+import "../../style/projects.css"
 
 export default function ProjectInfo({ project }) {
   return (
-    <div>
-      <div>
-        <h2>{project.title}</h2>
-      </div>
-      <Button
-        href={project.link}
-        target="_blank"
-      >
-        Visit
-      </Button>
-      <div>
-        <p>{project.description}</p>
-      </div>
-      <div>
-        <Button 
-          href={project.repo}
-          target='_blank'
-        >
-          View Repository
-        </Button>
-      </div>
-    </div>
+    <Container>
+      <Row>
+        <Col className="d-flex flex-column justify-content-center">
+          <h1>{project.title}</h1>
+          <div className="buttons mx-1">
+            <Button
+              href={project.link}
+              target="_blank"
+              className="btn-adjusted mb-3"
+            >
+              Visit
+            </Button>
+          </div>
+          <p>{project.description}</p>
+          <div className="buttons mx-1">
+            <Button 
+              href={project.repo}
+              target='_blank'
+              className="btn-adjusted mb-3"
+            >
+              View Repository
+            </Button>
+          </div>
+        </Col>
+      </Row>
+    </Container>
   )
 }
