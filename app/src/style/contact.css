@@ -28,17 +28,45 @@
   }
 }
 
-@media (min-width: 900px) {
-  .contact-container {
-    padding: 4rem 2rem;
-  }
-
-  .contact-form {
-    padding: 3rem;
-  }
-
+@media (min-width: 768px) {
   .submit {
-    margin-left: 35%;
+    margin-left: 20%;
   }
 }
 
+@media (min-width: 1000px) {
+  .contact-container {
+    margin: 0;
+  }
+
+  .contact-form {
+    margin: 0;
+  }
+
+  .submit {
+    margin-left: 25%;
+  }
+}
+
+.icons-container {
+  margin-top: 2rem;
+}
+
+.list-group-item {
+  border: none;
+  background-color: transparent;
+}
+
+.list-group-item img {
+  width: 40px;
+  height: 40px;
+}
+
+@media (min-width: 1000px) {
+  .connect-container {
+    margin-top: 3rem;
+  }
+  .content-col {
+    margin-right: 1rem;
+  }
+}

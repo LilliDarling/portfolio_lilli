@@ -58,7 +58,7 @@ export default function Contact() {
     <>
       <Container fluid className="contact-container">
         <Row className="justify-content-center">
-          <Col xs={12} md={8} lg={6}>
+          <Col>
             <Form onSubmit={handleSubmit} className="contact-form">
               <Form.Group className="mb-3">
                 <Form.Control 
