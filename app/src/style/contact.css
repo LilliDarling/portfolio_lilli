@@ -40,6 +40,17 @@
 .list-group-item {
   border: none;
   background-color: transparent;
+  width: auto;
+}
+
+.list-group-item:hover {
+  border: none;
+  background-color: transparent;
+}
+
+.list-group-item:active {
+  border: none;
+  background-color: none;
 }
 
 .list-group-item img {
@@ -49,10 +60,15 @@
 
 @media (min-width: 1000px) {
   .connect-container {
-    margin-top: 3rem;
+    margin-top: 15%;
   }
   .content-col {
-    margin-right: 1rem;
+    margin-right: 5%;
+  }
+
+  .list-group-item img {
+    width: 50px;
+    height: 50px;
   }
 }
 

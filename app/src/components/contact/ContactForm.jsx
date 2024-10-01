@@ -67,6 +67,7 @@ export default function Contact() {
                   value={formData.company}
                   onChange={handleChange}
                   placeholder="Enter Company" 
+                  className="fs-4"
                 />
               </Form.Group>
               <Form.Group className="mb-3">
@@ -76,6 +77,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Enter Name" 
+                  className="fs-4"
                 />
               </Form.Group>
               <Form.Group className="mb-3">
@@ -85,6 +87,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Enter email address" 
+                  className="fs-4"
                 />
               </Form.Group>
               <Form.Group className="mb-3">
@@ -95,6 +98,7 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Enter message" 
+                  className="fs-4"
                 />
               </Form.Group>
               <Form.Group className="submit">
