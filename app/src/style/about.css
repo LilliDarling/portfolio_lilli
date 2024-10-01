@@ -60,7 +60,7 @@ p {
 @media (min-width: 1000px) {
   .about-container {
     overflow: hidden;
-    margin-top: 2%;
+    margin-top: 5%;
   }
 
   .content-col {
