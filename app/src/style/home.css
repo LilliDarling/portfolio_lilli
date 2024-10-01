@@ -53,6 +53,9 @@
     max-width: 60px;
     max-height: 60px;
   }
+  .container-fluid {
+    margin-top: 5%
+  }
 }
 
 @media (max-width: 1049px) {
