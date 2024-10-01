@@ -1,6 +1,5 @@
 .project-gallery {
   padding: 0;
-  margin-top: 2rem;
 }
 
 .gallery-col {
@@ -17,19 +16,42 @@
   .gallery-row {
     flex-wrap: nowrap;
     overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #4C1E3C #C6BBB9;
+    margin: 0;
+    width: 100%;
+  }
+
+  .gallery-row::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .gallery-row::-webkit-scrollbar-track {
+    background: #C6BBB9;
+    border-radius: 4px;
+  }
+
+  .gallery-row::-webkit-scrollbar-thumb {
+    background-color: #4C1E3C;
+    border-radius: 4px;
+  }
+
+  .gallery-row::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
   }
 
   .gallery-col {
     width: auto;
+    margin-top: 50px;
   }
 
   .gallery-image {
-    height: 150px;
-    width: 150px;
+    height: 300px;
+    width: auto;
   }
 }
 
- .buttons {
+.buttons {
   display: flex;
   justify-content: center;
 }
@@ -41,27 +63,77 @@
 }
 
 .tech-stack {
-  padding: 1rem;
+  padding: 5px;
 }
 
 .stack-items {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background-color: #c6bbb948;
+  border-radius: 15px;
 }
 
 .stack-item {
-  font-size: 1rem;
+  font-size: 20px;
   font-weight: 500;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 750px) {
   .stack-items {
     flex-direction: row;
+    align-items: flex-start;
     flex-wrap: wrap;
   }
+}
 
-  .stack-item {
-    width: auto;
+.projects-container {
+  padding: 20px;
+}
+
+.mobile-project-nav {
+  background-color: #C6BBB9;
+}
+
+:root {
+  --selected-bg-color: #21242B;
+  --selected-text-color: #C6BBB9;
+}
+
+.offcanvas .list-group-item.active {
+  background-color: var(--selected-bg-color);
+  color: var(--selected-text-color);
+  border-color: var(--selected-bg-color);
+}
+
+.nav-tabs .nav-link.active {
+  background-color: var(--selected-bg-color);
+  color: var(--selected-text-color);
+  border-color: var(--selected-bg-color);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 5px;
+}
+
+.nav-tabs .nav-link {
+  color: #21242B;
+  font-weight: 500;
+}
+
+.nav-tabs {
+  border-bottom: solid #21242B;
+}
+
+.mobile-menu-btn {
+  border: none;
+  cursor: pointer;
+}
+
+.desktop-nav {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .projects-container {
+    padding: 10px;
   }
 }
