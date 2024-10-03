@@ -11,7 +11,7 @@
   font-size: 50px;
   color: #c6bbb985;
   margin-top: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .tech-stack .tech-icon {
@@ -45,7 +45,7 @@
     font-size: 45px;
   }
   .profile-img {
-    max-width: 90%;
+    max-width: 80%;
     margin-left: 90px;
     height: auto;
   }
@@ -54,7 +54,7 @@
     max-height: 60px;
   }
   .container-fluid {
-    margin-top: 10px;
+    margin-top: 55px;
   }
 }
 

@@ -42,11 +42,10 @@
 
   .gallery-col {
     width: auto;
-    margin-top: 50px;
   }
 
   .gallery-image {
-    height: 300px;
+    height: 250px;
     width: auto;
   }
 }
@@ -75,7 +74,7 @@
 }
 
 .stack-item {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -84,6 +83,10 @@
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: wrap;
+  }
+
+  .desktop {
+    margin-top: 30px;
   }
 }
 

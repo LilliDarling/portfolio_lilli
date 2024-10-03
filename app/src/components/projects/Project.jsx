@@ -17,7 +17,7 @@ export default function ProjectInfo({ project }) {
               Visit
             </Button>
           </div>
-          <p className="fs-5">{project.description}</p>
+          <p>{project.description}</p>
           <div className="buttons mx-1">
             <Button 
               href={project.repo}

@@ -6,7 +6,7 @@ export default function TechStack({ project }) {
     <Container className="tech-stack my-3">
       <Row>
         <Col className="d-flex flex-column align-items-start">
-          <h3 className="mb-2 fs-2">
+          <h3 className="mb-2 fs-2 desktop">
             Tech Stack:
           </h3>
           <div className="stack-items">
