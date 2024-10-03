@@ -7,7 +7,7 @@ export default function ProjectInfo({ project }) {
     <Container>
       <Row>
         <Col className="d-flex flex-column justify-content-center">
-          <h1>{project.title}</h1>
+          <h2 className="fs-1">{project.title}</h2>
           {project.link &&
             <div className="buttons mx-1">
               <Button

@@ -27,7 +27,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 125px;
+  width: 120px;
   background-color: #21242B;
   overflow-y: auto;
   overflow-x: hidden;
@@ -64,7 +64,7 @@
   display: flex;
   align-items: center;
   color: #C6BBB9;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .sidebar-nav .nav-item:hover {
@@ -72,8 +72,8 @@
 }
 
 .sidebar-nav .nav-item img {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 }
 
 .sidebar-nav .nav-item:hover img {
@@ -95,7 +95,7 @@
 }
 
 .sidebar-nav.desktop:hover {
-  width: 175px;
+  width: 170px;
 }
 
 @media (max-width: 991px) {
@@ -113,6 +113,7 @@
   .sidebar-nav.mobile.expanded .navbar-collapse {
     display: flex !important;
     flex-basis: auto;
+    transition: all 0.3s ease;
   }
 
   .sidebar-nav.mobile.expanded .nav-links,

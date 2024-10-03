@@ -118,14 +118,6 @@
   border-top-right-radius: 5px;
 }
 
-/* .nav-tabs .nav-link.active {
-  background-color: var(--selected-bg-color);
-  color: var(--selected-text-color);
-  border-color: var(--selected-bg-color);
-  border-top-left-radius: 15px;
-  border-top-right-radius: 5px;
-} */
-
 .nav-tabs .nav-link {
   color: #21242B;
   font-weight: 500;
