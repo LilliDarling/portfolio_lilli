@@ -8,15 +8,17 @@ export default function ProjectInfo({ project }) {
       <Row>
         <Col className="d-flex flex-column justify-content-center">
           <h1>{project.title}</h1>
-          <div className="buttons mx-1">
-            <Button
-              href={project.link}
-              target="_blank"
-              className="btn-adjusted mb-3"
-            >
-              Visit
-            </Button>
-          </div>
+          {project.link &&
+            <div className="buttons mx-1">
+              <Button
+                href={project.link}
+                target="_blank"
+                className="btn-adjusted mb-3"
+              >
+                Visit
+              </Button>
+            </div>
+          }
           <p>{project.description}</p>
           <div className="buttons mx-1">
             <Button 

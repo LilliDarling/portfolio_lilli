@@ -10,7 +10,7 @@ export default function About() {
 
   const latestProjects = Object.values(projects)
     .sort((a, b) => b.id - a.id)
-    .slice(0, 3)
+    .slice(1, 4)
 
   const handleProjectNavigate = (id) => {
     navigate('/projects', { state: { selectedProjectId: id }})

@@ -10,14 +10,10 @@ import "../../style/projects.css"
 export default function Projects() {
   const location = useLocation()
   const [showOffcanvas, setShowOffcanvas] = useState(false)
-  const [selectedProjectId, setSelectedProjectId] = useState(
-    location.state?.selectedProjectId || Object.keys(projects)[0]
-  )
+  const [selectedProjectId, setSelectedProjectId] = useState(Object.keys(projects)[0])
 
   useEffect(() => {
-    if (location.state?.selectedProjectId) {
-      setSelectedProjectId(location.state.selectedProjectId)
-    }
+    setSelectedProjectId(location.state?.selectedProjectId || Object.keys(projects)[0])
   }, [location])
 
   const selectedProject = projects[selectedProjectId]
@@ -28,11 +24,11 @@ export default function Projects() {
   return (
     <Container fluid className="projects-container">
       <Row className="desktop-nav d-none d-md-flex">
-        <Nav variant='tabs' className="w-100">
+        <Nav variant='tabs' className="w-100" activeKey={selectedProjectId}>
           {Object.values(projects).map((project) => (
             <Nav.Item key={project.id}>
               <Nav.Link
-                active={selectedProjectId === project.id}
+                eventKey={project.id}
                 onClick={() => setSelectedProjectId(project.id)}
                 className="fs-4"
               >
