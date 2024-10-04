@@ -12,8 +12,8 @@ export default function Connect() {
     <Container fluid className="connect-container">
       <Row>
         <Col className="content-col">
-          <h1 className="text-center">Connect with Me!</h1>
-          <p className="fs-4 py-4 px-4">If you would like to work with me or just shoot ideas feel free to send me a message here or link up with me through one of the links below! I am always looking for new collabs and innovative solutions in software engineering.</p>
+          <h1>Connect with Me!</h1>
+          <p className="fs-5 py-4 px-4">If you would like to work with me or just shoot ideas feel free to send me a message here or link up with me through one of the links below! I am always looking for new collabs and innovative solutions in software engineering.</p>
           <div className="icons-container">
             <ListGroup horizontal className="justify-content-center justify-content-lg-start">
               <ListGroup.Item action href="https://discordapp.com/users/814526671549235209" target="_blank">

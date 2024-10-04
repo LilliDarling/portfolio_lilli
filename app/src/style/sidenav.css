@@ -27,7 +27,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 120px;
+  width: 100px;
   background-color: #21242B;
   overflow-y: auto;
   overflow-x: hidden;
@@ -39,16 +39,12 @@
   background: transparent;
 }
 
-.sidebar-nav.desktop:hover {
-  width: 200px;
-}
-
 .sidebar-nav .nav-header {
   background-color: #21242B;
 }
 
 .sidebar-nav .logo {
-  max-width: 100px;
+  max-width: 85px;
 }
 
 .sidebar-nav .navbar-toggler {
@@ -64,7 +60,7 @@
   display: flex;
   align-items: center;
   color: #C6BBB9;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .sidebar-nav .nav-item:hover {
@@ -72,8 +68,8 @@
 }
 
 .sidebar-nav .nav-item img {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
 }
 
 .sidebar-nav .nav-item:hover img {
@@ -95,7 +91,7 @@
 }
 
 .sidebar-nav.desktop:hover {
-  width: 170px;
+  width: 135px;
 }
 
 @media (max-width: 991px) {
