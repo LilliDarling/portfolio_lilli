@@ -1,37 +1,37 @@
 
-const express = require('express')
-const nodemailer = require('nodemailer')
-const cors = require('cors')
-const { S3Client, GetObjectCommand } = require("@aws-sdk/client-s3")
+import express, { json } from 'express'
+import { createTransport } from 'nodemailer'
+import cors from 'cors'
+import { SSMClient, GetParameterCommand } from "@aws-sdk/client-ssm"
 
 const app = express()
-const s3Client = new S3Client({ region: "us-east-2" })
+const ssmClient = new SSMClient({ region: "us-east-2" })
 
 async function getParameter(name) {
-  const command = new GetObjectCommand({
+  const command = new GetParameterCommand({
     Name: name,
     WithDecryption: true
   });
-  const response = await s3Client.send(command);
+  const response = await ssmClient.send(command);
   return response.Parameter.Value;
 }
 
 async function initializeServer() {
-  const REACT_URL = await getParameter('/REACT_URL')
-  const SMTP_HOST = await getParameter('/SMTP_HOST')
-  const EMAIL_USER = await getParameter('/EMAIL_USER')
-  const EMAIL_PASS = await getParameter('/EMAIL_PASS')
-
+  const REACT_URL = await getParameter('REACT_URL')
+  const SMTP_HOST = await getParameter('SMTP_HOST')
+  const EMAIL_USER = await getParameter('EMAIL_USER')
+  const EMAIL_PASS = await getParameter('EMAIL_PASS')
+  const BACKEND_URL = await getParameter('BACKEND_URL')
 
   const corsOps = {
-    origin: REACT_URL,
+    origin: [REACT_URL, BACKEND_URL],
     optionsSuccessStatus: 200
   }
 
-  app.use(express.json())
+  app.use(json())
   app.use(cors(corsOps))
 
-  const transporter = nodemailer.createTransport({
+  const transporter = createTransport({
     service: 'gmail',
     host: SMTP_HOST,
     port: 587,

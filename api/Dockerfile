@@ -1,12 +1,13 @@
 FROM node
 
-WORKDIR /app
+WORKDIR /api
 
-COPY package*.json .
+COPY package.json package.json
+COPY package-lock.json package-lock.json
 
 RUN npm install
 
-COPY . .
+COPY email.js email.js
 
 EXPOSE 3000
 
