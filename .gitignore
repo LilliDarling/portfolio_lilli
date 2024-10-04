@@ -1,3 +1,5 @@
 .env
 portfolio-lilli.pem
 .dockerignore
+.pem
+node_modules
