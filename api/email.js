@@ -2,20 +2,18 @@
 const express = require('express')
 const nodemailer = require('nodemailer')
 const cors = require('cors')
-const AWS = require('aws-sdk')
+const { S3Client, GetObjectCommand } = require("@aws-sdk/client-s3")
 
 const app = express()
-const ssm = new AWS.SSM()
-
-AWS.config.update({region: 'us-east-2'})
+const s3Client = new S3Client({ region: "us-east-2" })
 
 async function getParameter(name) {
-  const params = {
+  const command = new GetObjectCommand({
     Name: name,
     WithDecryption: true
-  }
-  const result = await ssm.getParameter(params).promise()
-  return result.Parameter.Value
+  });
+  const response = await s3Client.send(command);
+  return response.Parameter.Value;
 }
 
 async function initializeServer() {
